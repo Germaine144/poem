@@ -37,7 +37,7 @@ function Form (){
     }
     return (
         <p> At {firstName} {lastName}🌟 s home,{address} 📍🏡 is where,
-        The world is painted in {favoriteColor} 🎨, calm and fair.
+        The world is painted in {favoriteColor} 🖤🎨, calm and fair.
         With {hobby}🎯  in hand, their heart beats true,
         And {pitName}🐶 🐾 by their side, adventures pursue 🌈.</p>
 
@@ -47,16 +47,17 @@ function Form (){
         <>
          <h3 className="text-center">Your Nature Poem 🌿</h3>
          <div className="text-center">{renderPoem()}</div>
-        <div className=" px-8 py-10 flex gap-10 flex-col  font-bold">
-            <form className="flex flex-col gap-10" action ="submit"  onSubmit={handleSubmite}>
-            <input className="p-2 border rounded-lg" type="text" value={firstName} placeholder="Enter your first name"  onChange={(e) => setFirstName(e.target.value)}></input>
-            <input className="p-2 border rounded-lg" type="text" value={lastName} placeholder="Enter your last name"   onChange={(e) => setLastName(e.target.value)}></input>
+        <div className=" px-8 py-10 flex gap-10 flex-col  font-bold px-30 py-30  flex justify-center items-center  w-auto">
+            <form className="bg-white shadow-2xl rounded-2xl p-10 mt-8 w-full max-w-5xl flex flex-col gap-5   border border-black lg:grid grid-cols-2" action ="submit"  onSubmit={handleSubmite}>
+            <input className="p-2 border rounded-lg  " type="text" value={firstName} placeholder="Enter your first name"  onChange={(e) => setFirstName(e.target.value)}></input>
+            <input className="p-2 border rounded-lg  sm:mt-0" type="text" value={lastName} placeholder="Enter your last name"   onChange={(e) => setLastName(e.target.value)}></input>
             <input  className="p-2 border rounded-lg" type="text" value={address} placeholder="Enter your address"   onChange={(e) => setAddress(e.target.value)}></input>
-            <input  className="p-2 border rounded-lg" type="text" value={favoriteColor} placeholder="Enter your favorite color"   onChange={(e) => setfavoriteColor(e.target.value)}></input>
+            <input  className="p-2 border rounded-lg" type="text" value={favoriteColor} placeholder="Enter your favorite color 🖤"   onChange={(e) => setfavoriteColor(e.target.value)}></input>
             <input  className="p-2 border rounded-lg" type="text" value={hobby} placeholder="Enter your hobby"   onChange={(e) => setHobby(e.target.value)}></input>
-            <input  className="p-2 border rounded-lg" type="text" value={pitName} placeholder="Enter your pet name"   onChange={(e) => setPitName(e.target.value)}></input>
-            <button type="submit" className="p-2 border rounded-lg bg-green-200">Submit</button>
-
+            <input  className="p-2 border rounded-lg " type="text" value={pitName} placeholder="Enter your pet name"   onChange={(e) => setPitName(e.target.value)}></input>
+            <div className="col-span-2 flex justify-center">
+            <button type="submit" className="mt-4 bg-green-500 text-white font-semibold py-3 px-6 rounded-md hover:bg-green-800 col-span-2 w-72">Submit</button>
+            </div>
              </form>
         </div>
         </>
